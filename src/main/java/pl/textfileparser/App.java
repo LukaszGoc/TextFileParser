@@ -42,7 +42,9 @@ public class App {
         try {
             fileReader = new FileReader(args[0]);
         } catch (FileNotFoundException e) {
+            LOGGER.error("No file parameter");
             e.printStackTrace();
+            System.out.println("Run with filepath as parameter and 'CSV' or 'XML' as expected output.");
         }
 
         BufferedReader bufferedReader = new BufferedReader(fileReader);
