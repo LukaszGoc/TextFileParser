@@ -8,8 +8,8 @@ import java.io.IOException;
 import java.util.List;
 
 public class CSVGenerator implements OutputFileStream {
-    
-    private BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("output.csv"));
+
+    private final BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("output.csv"));
     private int countSentences = 1;
     final static Logger LOGGER = Logger.getLogger(CSVGenerator.class);
 
@@ -46,4 +46,5 @@ public class CSVGenerator implements OutputFileStream {
         bufferedWriter.close();
         LOGGER.info("Write buffer closed.");
     }
+
 }
